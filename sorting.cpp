@@ -16,7 +16,7 @@ static double get_second (void) {
 	return ((double)tp.tv_sec + (double)tp.tv_usec * 1.e-6);
 }
 
-void bubble_sort(vector<int>::iterator arr, int len) {
+double bubble_sort(vector<int>::iterator arr, int len) {
 	double total_time = get_second();
 	for (int i=0; i < len; i++) {
 		for (int j=0; j < len - 1; j++) {
@@ -30,9 +30,10 @@ void bubble_sort(vector<int>::iterator arr, int len) {
 	total_time = get_second() - total_time;
 
 	fprintf(stderr, "Normal Bubble Sort - Elapsed Time: %lf\n", total_time);
+	return total_time;
 }
 
-void opt_bubble_sort(vector<int>::iterator arr, int len) {
+double opt_bubble_sort(vector<int>::iterator arr, int len) {
 	double total_time = get_second();
 	int sorted_num = 987654321;
 	int tmp = 987654321;
@@ -51,6 +52,7 @@ void opt_bubble_sort(vector<int>::iterator arr, int len) {
 	total_time = get_second() - total_time;
 
 	fprintf(stderr, "Optimized Bubble Sort - Elapsed Time: %lf\n", total_time);
+	return total_time;
 }
 
 bool is_equal(vector<int>::iterator arr1, vector<int>::iterator arr2, int len) {

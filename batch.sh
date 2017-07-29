@@ -4,6 +4,7 @@ make
 NUM_ELEM=10000
 TIME_LOG_PATH='./time.log'
 CORRECT_LOG_PATH='./correct.log'
+rm ./*.csv
 rm ./*.log
 for i in {1..100}
 do

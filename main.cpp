@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
 	unsort2.reserve(num_elem);
 	sorted.reserve(num_elem);
 	seed = atoi(argv[2]) % 100;
-	printf("%d %d\n", num_elem, seed);
+	fprintf(stderr, "%d %d\n", num_elem, seed);
 	for (int i=0; i < num_elem; i++) {
 		int val = uniform(LOWER_BOUND, UPPER_BOUND, seed);
 		unsort1.push_back(val);
